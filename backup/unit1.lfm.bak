@@ -1,0 +1,633 @@
+object Form1: TForm1
+  Left = 174
+  Height = 690
+  Top = 89
+  Width = 1123
+  Caption = 'PIT-37 autor: Łukasz Kaleta'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = 15461355
+  LCLVersion = '1.6.2.0'
+  Visible = True
+  WindowState = wsMaximized
+  object Edit: TEdit
+    Left = 256
+    Height = 23
+    Top = 56
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 0
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 448
+    Height = 48
+    Top = 640
+    Width = 137
+    Caption = 'Oblicz podatek'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 16
+    Top = 64
+    Width = 186
+    Caption = 'Należności ze stosunku pracy'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 256
+    Height = 15
+    Top = 32
+    Width = 49
+    Caption = 'Przychód'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 416
+    Height = 15
+    Top = 32
+    Width = 142
+    Caption = 'Koszty uzykania przychodu'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 576
+    Height = 15
+    Top = 32
+    Width = 42
+    Caption = 'Dochód'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 736
+    Height = 15
+    Top = 32
+    Width = 30
+    Caption = 'Strata'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 896
+    Height = 15
+    Top = 32
+    Width = 164
+    Caption = 'Zaliczka pobrana przez płatnika'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 16
+    Height = 16
+    Top = 96
+    Width = 64
+    Caption = 'Emerytury'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Height = 16
+    Top = 128
+    Width = 223
+    Caption = 'Działalność wykonywana osobiście'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 16
+    Height = 16
+    Top = 160
+    Width = 103
+    Caption = 'Prawa autorskie'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 16
+    Height = 16
+    Top = 192
+    Width = 72
+    Caption = 'Inne źródła'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 16
+    Height = 15
+    Top = 224
+    Width = 35
+    Caption = 'Razem'
+    ParentColor = False
+  end
+  object Label12: TLabel
+    Left = 16
+    Height = 16
+    Top = 252
+    Width = 232
+    Caption = 'Składki na ubezpieczenie społeczne'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 16
+    Height = 30
+    Top = 281
+    Width = 177
+    Caption = 'Dochód po odliczeniu składek na '#13#10'ubezpieczenie społeczne'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 16
+    Height = 15
+    Top = 520
+    Width = 86
+    Caption = 'Podatek należny'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 16
+    Height = 15
+    Top = 552
+    Width = 73
+    Caption = 'Suma zaliczek'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 16
+    Height = 15
+    Top = 584
+    Width = 55
+    Caption = 'Do zapłaty'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 416
+    Height = 23
+    Top = 56
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 2
+    Text = '0'
+  end
+  object Edit2: TEdit
+    Left = 576
+    Height = 23
+    Top = 56
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 3
+    Text = '0'
+  end
+  object Edit3: TEdit
+    Left = 736
+    Height = 23
+    Top = 56
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 4
+    Text = '0'
+  end
+  object Edit4: TEdit
+    Left = 896
+    Height = 23
+    Top = 56
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 5
+    Text = '0'
+  end
+  object Edit5: TEdit
+    Left = 256
+    Height = 23
+    Top = 88
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 6
+    Text = '0'
+  end
+  object Edit6: TEdit
+    Left = 416
+    Height = 23
+    Top = 88
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 7
+    Text = '0'
+  end
+  object Edit7: TEdit
+    Left = 576
+    Height = 23
+    Top = 88
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 8
+    Text = '0'
+  end
+  object Edit8: TEdit
+    Left = 736
+    Height = 23
+    Top = 88
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 9
+    Text = '0'
+  end
+  object Edit9: TEdit
+    Left = 896
+    Height = 23
+    Top = 88
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 10
+    Text = '0'
+  end
+  object Edit10: TEdit
+    Left = 256
+    Height = 23
+    Top = 120
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 11
+    Text = '0'
+  end
+  object Edit11: TEdit
+    Left = 416
+    Height = 23
+    Top = 120
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 12
+    Text = '0'
+  end
+  object Edit12: TEdit
+    Left = 576
+    Height = 23
+    Top = 120
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 13
+    Text = '0'
+  end
+  object Edit13: TEdit
+    Left = 736
+    Height = 23
+    Top = 120
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 14
+    Text = '0'
+  end
+  object Edit14: TEdit
+    Left = 896
+    Height = 23
+    Top = 120
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 15
+    Text = '0'
+  end
+  object Edit15: TEdit
+    Left = 256
+    Height = 23
+    Top = 152
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 16
+    Text = '0'
+  end
+  object Edit16: TEdit
+    Left = 416
+    Height = 23
+    Top = 152
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 17
+    Text = '0'
+  end
+  object Edit17: TEdit
+    Left = 576
+    Height = 23
+    Top = 152
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 18
+    Text = '0'
+  end
+  object Edit18: TEdit
+    Left = 736
+    Height = 23
+    Top = 152
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 19
+    Text = '0'
+  end
+  object Edit19: TEdit
+    Left = 896
+    Height = 23
+    Top = 152
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 20
+    Text = '0'
+  end
+  object Edit20: TEdit
+    Left = 256
+    Height = 23
+    Top = 184
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 21
+    Text = '0'
+  end
+  object Edit21: TEdit
+    Left = 416
+    Height = 23
+    Top = 184
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 22
+    Text = '0'
+  end
+  object Edit22: TEdit
+    Left = 576
+    Height = 23
+    Top = 184
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 23
+    Text = '0'
+  end
+  object Edit23: TEdit
+    Left = 736
+    Height = 23
+    Top = 184
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 24
+    Text = '0'
+  end
+  object Edit24: TEdit
+    Left = 896
+    Height = 23
+    Top = 184
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 25
+    Text = '0'
+  end
+  object Edit25: TEdit
+    Left = 256
+    Height = 23
+    Top = 216
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 26
+    Text = '0'
+  end
+  object Edit26: TEdit
+    Left = 416
+    Height = 23
+    Top = 216
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 27
+    Text = '0'
+  end
+  object Edit27: TEdit
+    Left = 576
+    Height = 23
+    Top = 216
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 28
+    Text = '0'
+  end
+  object Edit28: TEdit
+    Left = 736
+    Height = 23
+    Top = 216
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 29
+    Text = '0'
+  end
+  object Edit29: TEdit
+    Left = 896
+    Height = 23
+    Top = 216
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 30
+    Text = '0'
+  end
+  object Edit30: TEdit
+    Left = 256
+    Height = 23
+    Top = 248
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 31
+    Text = '0'
+  end
+  object Edit35: TEdit
+    Left = 256
+    Height = 23
+    Top = 288
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 32
+    Text = '0'
+  end
+  object Edit40: TEdit
+    Left = 256
+    Height = 23
+    Top = 512
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 33
+    Text = '0'
+  end
+  object Edit45: TEdit
+    Left = 256
+    Height = 23
+    Top = 540
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 34
+    Text = '0'
+  end
+  object Edit50: TEdit
+    Left = 256
+    Height = 23
+    Top = 576
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 35
+    Text = '0'
+  end
+  object Label17: TLabel
+    Left = 16
+    Height = 15
+    Top = 328
+    Width = 128
+    Caption = 'Dochód po odliczeniach'
+    ParentColor = False
+  end
+  object Edit36: TEdit
+    Left = 256
+    Height = 23
+    Top = 320
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 36
+    Text = '0'
+  end
+  object Label18: TLabel
+    Left = 16
+    Height = 16
+    Top = 456
+    Width = 235
+    Caption = 'Składki na ubezpieczenia zdrowotne'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit37: TEdit
+    Left = 256
+    Height = 23
+    Top = 448
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 37
+    Text = '0'
+  end
+  object Label19: TLabel
+    Left = 16
+    Height = 15
+    Top = 360
+    Width = 154
+    Caption = 'Podstawa obliczenia podatku'
+    ParentColor = False
+  end
+  object Edit38: TEdit
+    Left = 256
+    Height = 23
+    Top = 352
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 38
+    Text = '0'
+  end
+  object Label20: TLabel
+    Left = 16
+    Height = 15
+    Top = 392
+    Width = 99
+    Caption = 'Obliczony podatek'
+    ParentColor = False
+  end
+  object Edit39: TEdit
+    Left = 256
+    Height = 23
+    Top = 384
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 39
+    Text = '0'
+  end
+  object Label21: TLabel
+    Left = 16
+    Height = 15
+    Top = 424
+    Width = 43
+    Caption = 'Podatek'
+    ParentColor = False
+  end
+  object Edit41: TEdit
+    Left = 256
+    Height = 23
+    Top = 416
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 40
+    Text = '0'
+  end
+  object Label22: TLabel
+    Left = 16
+    Height = 15
+    Top = 488
+    Width = 129
+    Caption = 'Podatek po odliczeniach'
+    ParentColor = False
+  end
+  object Edit42: TEdit
+    Left = 256
+    Height = 23
+    Top = 480
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 41
+    Text = '0'
+  end
+  object Label23: TLabel
+    Left = 16
+    Height = 15
+    Top = 616
+    Width = 48
+    Caption = 'Nadpłata'
+    ParentColor = False
+  end
+  object Edit43: TEdit
+    Left = 256
+    Height = 23
+    Top = 608
+    Width = 148
+    OnChange = EditChange
+    TabOrder = 42
+    Text = '0'
+  end
+end
